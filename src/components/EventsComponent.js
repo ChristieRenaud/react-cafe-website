@@ -15,7 +15,7 @@ const RenderEvent = ({ upcomingEvent }) => {
       <Col className="col-sm-7 text-center text-sm-left">
         <h3>{upcomingEvent.name}</h3>
         <h4 className="text-secondary">
-          {upcomingEvent.date} &#8226 {upcomingEvent.time}
+          {upcomingEvent.date} {String.fromCharCode(183)} {upcomingEvent.time}
         </h4>
         <p>{upcomingEvent.description}</p>
       </Col>

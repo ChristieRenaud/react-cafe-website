@@ -70,6 +70,10 @@ p {
   }
 }
 
+#catThumbnail {
+  border: none;
+}
+
 .row-headline {
   padding-top: 8rem;
 }
