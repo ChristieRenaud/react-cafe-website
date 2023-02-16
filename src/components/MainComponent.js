@@ -5,7 +5,7 @@ import Adopt from './AdoptComponent'
 import Events from './EventsComponent'
 import Visit from './VisitComponent'
 import Home from './HomeComponent'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 class Main extends Component {
   constructor(props) {

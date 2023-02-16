@@ -5,7 +5,7 @@ function Footer(props) {
   return (
     <footer className="site-footer bg-dark mt-5">
       <div className="container-fluid">
-        <div className="row pt-3 px-3">
+        <div className="row pt-4 px-3">
           <div className="col-sm-5 text-decoration-none pb-4 pb-md-1">
             <h5 className="text-light text-uppercase">Contact Us</h5>
             <address className="text-light">
@@ -61,7 +61,7 @@ function Footer(props) {
             </ul>
           </div>
         </div>
-        <div className="row pb-2">
+        <div className="row pb-3">
           <div className="col-sm-5 mx-auto text-sm-center">
             <a className="btn" href="http://instagram.com/">
               <i className="fa fa-instagram fa-lg text-light"></i>

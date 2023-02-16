@@ -36,19 +36,23 @@ class Events extends Component {
 
   render() {
     return (
-      <div className="container px-5">
-        <Row className="row-content" id="events">
-          <Col className="col-md-10 mx-auto text-center">
-            <h1 className="mx-auto">Upcoming Events</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum,
-              dolorum suscipit. Deserunt odio dolore blanditiis similique
-              delectus autem dolorum ducimus illo, nulla reprehenderit
-              consectetur?
-            </p>
-          </Col>
-        </Row>
-        <Row>{this.events}</Row>
+      <div>
+        <div className="main-events hero">
+          <h1 className="text-center text-white main-title">Upcoming Events</h1>
+        </div>
+        <div className="container px-5">
+          <Row className="row-content" id="events">
+            <Col className="col-md-10 mx-auto text-center">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum,
+                dolorum suscipit. Deserunt odio dolore blanditiis similique
+                delectus autem dolorum ducimus illo, nulla reprehenderit
+                consectetur?
+              </p>
+            </Col>
+          </Row>
+          <Row>{this.events}</Row>
+        </div>
       </div>
     )
   }

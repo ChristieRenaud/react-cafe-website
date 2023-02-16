@@ -38,22 +38,19 @@ class Adopt extends Component {
     })
     console.log(this.state)
     this.toggleModal()
-    console.log(this.state)
-    // event.preventDefault()
   }
 
   render() {
     const RenderCatThumbnail = ({ cat, toggle, handleClick }) => {
       return (
         <div className="card h-100">
-          <a className="catThumbnail" onClick={this.handleClick}>
-            <img
-              src={cat.image}
-              className="card-img-top"
-              data-id={cat.id}
-              alt={cat.alt}
-            />
-          </a>
+          <img
+            onClick={this.handleClick}
+            src={cat.image}
+            className="card-img-top"
+            data-id={cat.id}
+            alt={cat.alt}
+          />
           <div className="card-body">
             <h5 className="card-title">{cat.name}</h5>
             <h6 className="card-subtitle mb-2 text-muted">
@@ -69,8 +66,8 @@ class Adopt extends Component {
       console.log(selectedCat)
       return (
         <>
-          <ModalHeader className="pl-4" toggle={this.toggleModal}>
-            <h1> {selectedCat.name}</h1>
+          <ModalHeader tag="h2" className="pl-4" toggle={this.toggleModal}>
+            {selectedCat.name}
           </ModalHeader>
           <Card className="m-sm-4">
             <img
@@ -102,50 +99,51 @@ class Adopt extends Component {
       )
     })
     return (
-      <div className="container">
-        <Row className="px-1 px-sm-0" id="adopt">
-          <Col md={10} className="mx-auto">
-            <img
-              src="/assets/images/relaxing-cat.jpg"
-              className="img-fluid my-3 my-sm-5"
-              alt="Cat relaxing looking in camera."
-            />
-            <h1 className="text-center mx-auto">
-              All Our Cats Are Looking for a Good Home
-            </h1>
-            <p className="text-center mt-4 mx-auto">
-              If you are interested in adding a new pet to your family, we
-              invite you to view the cats currently available for adoption. For
-              more information about a specific cat click on their photo.
-            </p>
-          </Col>
-        </Row>
-        <Row className="row-cols-1 row-cols-sm-3 row-cols-lg-4 cat-cards mt-4">
-          {catsList}
-        </Row>
-        <Row className="row my-5">
-          <Col className="col-md-9 mx-auto text-center">
-            <p>
-              If you are interested in adopting one of these cats,{' '}
-              <Link to="/visit">reserve a time</Link> to visit our cafe to find
-              the cat that will be a perfect addition to your family. An
-              adoption application and fee of $100 covering vaccinations and a
-              medical checkup are required. For any questions, call us at
-              248-XXX-XXXX, or email{' '}
-              <a href="mailtoCalicoCafe@gmail.com">CalicoCafe@gmail.com</a>.
-            </p>
-          </Col>
-        </Row>
-        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-          <ModalBody>
-            <RenderCatInfo
-              selectedCat={
-                this.state.cats.filter((cat) => this.state.catId === cat.id)[0]
-              }
-              toggle={this.toggleModal}
-            />
-          </ModalBody>
-        </Modal>
+      <div>
+        <div className="main-adopt hero">
+          <h1 className="text-center text-white main-title">
+            Our Cats Are Looking for a Good Home
+          </h1>
+        </div>
+        <div className="container">
+          <Row className="px-1 px-sm-0 my-4" id="adopt">
+            <Col md={10} className="mx-auto">
+              <p className="text-center mt-4 mx-auto">
+                If you are interested in adding a new pet to your family, we
+                invite you to view the cats currently available for adoption.
+                For more information about a specific cat click on their photo.
+              </p>
+            </Col>
+          </Row>
+          <Row className="row-cols-1 row-cols-sm-3 row-cols-lg-4 cat-cards mt-4">
+            {catsList}
+          </Row>
+          <Row className="row my-5">
+            <Col className="col-md-9 mx-auto text-center">
+              <p>
+                If you are interested in adopting one of these cats,{' '}
+                <Link to="/visit">reserve a time</Link> to visit our cafe to
+                find the cat that will be a perfect addition to your family. An
+                adoption application and fee of $100 covering vaccinations and a
+                medical checkup are required. For any questions, call us at
+                248-XXX-XXXX, or email{' '}
+                <a href="mailtoCalicoCafe@gmail.com">CalicoCafe@gmail.com</a>.
+              </p>
+            </Col>
+          </Row>
+          <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+            <ModalBody>
+              <RenderCatInfo
+                selectedCat={
+                  this.state.cats.filter(
+                    (cat) => this.state.catId === cat.id,
+                  )[0]
+                }
+                toggle={this.toggleModal}
+              />
+            </ModalBody>
+          </Modal>
+        </div>
       </div>
     )
   }
