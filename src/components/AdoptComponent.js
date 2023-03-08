@@ -1,14 +1,5 @@
 import React, { Component } from 'react'
-import {
-  Button,
-  Row,
-  Col,
-  Modal,
-  ModalBody,
-  ModalHeader,
-  Card,
-  CardHeader,
-} from 'reactstrap'
+import { Row, Col, Modal, ModalBody, ModalHeader, Card } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { CATS } from '../shared/cats'
 
@@ -56,7 +47,6 @@ class Adopt extends Component {
             <h6 className="card-subtitle mb-2 text-muted">
               {cat.type}, {cat.age}
             </h6>
-            {/* <p className="card-text">{cat.shortDescription}</p> */}
           </div>
         </div>
       )
@@ -119,9 +109,9 @@ class Adopt extends Component {
             {catsList}
           </Row>
           <Row className="row my-5">
-            <Col className="col-md-9 mx-auto text-center">
+            <Col className="col-md-9 mx-auto text-center px-4">
               <p>
-                If you are interested in adopting one of these cats,{' '}
+                If you'd like to adopt one of these cats,{' '}
                 <Link to="/visit">reserve a time</Link> to visit our cafe to
                 find the cat that will be a perfect addition to your family. An
                 adoption application and fee of $100 covering vaccinations and a

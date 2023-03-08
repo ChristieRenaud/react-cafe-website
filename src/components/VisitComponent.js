@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Button, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap'
-import { Link } from 'react-router-dom'
 
 class Visit extends Component {
   constructor(props) {
